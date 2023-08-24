@@ -44,7 +44,7 @@ sub new {
 	    }
 	}
 	$self->{'args'} = Finance::GeniusTrader::ArgsTree->new(@{$args});
-    } elsif (defined (@{"$class\::DEFAULT_ARGS"})) {
+    } elsif (@{"$class\::DEFAULT_ARGS"}) {
 	$self->{'args'} = Finance::GeniusTrader::ArgsTree->new(@{"$class\::DEFAULT_ARGS"});
     } else {
 	$self->{'args'} = Finance::GeniusTrader::ArgsTree->new(); # no args
